@@ -1,0 +1,10 @@
+# Created by http://www.gitignore.io
+
+### Vagrant ###
+.vagrant/
+
+### Project ###
+chef/cache/
+chef/vendor/
+*.lock
+*.log
