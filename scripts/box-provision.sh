@@ -8,6 +8,9 @@ echo "Installing handy tools"
 # update apt-get repos
 sudo apt-get update -y
 
+# install build essentials
+sudo apt-get install build-essential -y
+
 # install curl
 sudo apt-get install curl -y
 

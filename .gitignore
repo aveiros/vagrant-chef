@@ -4,7 +4,6 @@
 .vagrant/
 
 ### Project ###
-chef/cache/
-chef/vendor/
+chef/cookbooks/vendor/
 *.lock
 *.log

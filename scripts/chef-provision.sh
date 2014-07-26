@@ -2,11 +2,12 @@
 
 CUR_PATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 CHEF_PATH="$CUR_PATH/../chef"
-CHEF_APP_PATH="$CHEF_PATH/app"
-CHEF_VENDOR_PATH="$CHEF_PATH/vendor"
+COOKBOOKS_PATH="$CHEF_PATH/cookbooks"
+COOKBOOKS_APP_PATH="$COOKBOOKS_PATH/app"
+COOKBOOKS_VENDOR_PATH="$COOKBOOKS_PATH/vendor"
 
-echo "Fetching cookbooks..."
-berks vendor $CHEF_VENDOR_PATH -b $CHEF_APP_PATH/Berksfile
+echo "Fetching vendor cookbooks..."
+berks vendor ${COOKBOOKS_VENDOR_PATH} -b ${COOKBOOKS_PATH}/Berksfile
 
 echo "Installing cookbooks..."
-sudo chef-solo -c $CHEF_APP_PATH/solo.rb -j $CHEF_APP_PATH/solo.json
+sudo chef-solo -c ${CHEF_PATH}/solo.rb -j ${CHEF_PATH}/solo.json
