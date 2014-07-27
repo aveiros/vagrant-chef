@@ -28,9 +28,9 @@ Ubuntu box provisioned using Chef and Berkshelf.
 |   |   ├── app/                    # chef app cookbooks folder (for application specific)
 |   |   ├── vendor/                 # chef vendor cookbooks folder (for third party)
 |   |   └── Berksfile               # berksfile (cookbooks install dependencies)
-|		├── scripts/                    # chef provision scripts folder
-|   |		├── box-provision.sh        # installs box tools such as: git, chef, berkshelf, etc.
-|   |		└── chef-provision.sh       # installs chef cookbooks
+|	├── scripts/                    # chef provision scripts folder
+|   |	├── box-provision.sh        # installs box tools such as: git, chef, berkshelf, etc.
+|   |	└── chef-provision.sh       # installs chef cookbooks
 |   ├── solo.json                   # chef solo data file
 |   └── solo.rb                     # chef solo configuration file
 └── Vagrantfile                     # Vagrant configuration file
