@@ -22,7 +22,6 @@ Ubuntu box provisioned using Chef and Berkshelf.
 ### Structure
 ```
 .
-
 ├── chef/                           # chef content folder
 |   ├── cache/                      # chef cache folder
 |   ├── cookbooks/                  # chef cookbooks folder
