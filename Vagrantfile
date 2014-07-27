@@ -9,17 +9,17 @@ Vagrant.configure("2") do |config|
   end
 
   ### Method 1 (using vagrant shell provisioner)
-  config.vm.provision :shell, :inline => "bash /vagrant/scripts/box-provision.sh"
-  config.vm.provision :shell, :inline => "bash /vagrant/scripts/chef-provision.sh"
+  config.vm.provision :shell, :inline => "bash /vagrant/chef/scripts/box-provision.sh"
+  config.vm.provision :shell, :inline => "bash /vagrant/chef/scripts/chef-provision.sh"
 
   ### Method 2 (using vagrant chef solo provisioner)
-  #config.vm.provision :shell, :inline => "bash /vagrant/scripts/box-provision.sh"
+  #config.vm.provision :shell, :inline => "bash /vagrant/chef/scripts/box-provision.sh"
   #config.vm.provision :chef_solo do |chef|
   #  chef.cookbooks_path = [ "chef/cookbooks/vendor", "chef/cookbooks/app" ]
   #  chef.run_list = ["recipe[app::default]"]
   #end
 
   ### Method 3 (using the terminal)
-  #$ bash scripts/box-provision.sh
-  #$ bash scripts/chef-provision.sh
+  #$ bash chef/scripts/box-provision.sh
+  #$ bash chef/scripts/chef-provision.sh
 end
